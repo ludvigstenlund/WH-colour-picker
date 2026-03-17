@@ -1,0 +1,56 @@
+body {
+    background-color: azure;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 3rem;;
+    margin: 40px;
+}
+
+.navbar {
+    background-color: rgb(50, 50, 50);
+    height: clamp(2rem, 8vh, 40rem);
+    margin: -15px;
+    display: flex;
+    align-items: center;
+}
+
+.navlänk {
+    color: rgb(205, 204, 204);
+    text-decoration: none;
+    font-size: 1.8vw;
+    text-align: center;
+    line-height: 7vh;
+    display: block; 
+    margin: 10px;
+}
+
+.nuvarande_sida {
+    font-weight: bold;
+}
+
+.navlänk:hover {
+    color: white;
+    text-decoration: underline;
+    transform: scale(1.1);
+    transition: 0.1s ease, 0.1s;
+    
+}
+
+.flexbox {
+    display: flex;
+    width: 100%;
+}
+
+.boxcontent {
+    width: 50%;
+    margin: 10px;
+    background-color: azure;
+    border: 1px solid;
+    border-color: rgb(200, 200, 200);
+}
