@@ -1,23 +1,27 @@
 body {
-    background-color: azure;
+    background-color: rgb(243, 243, 243);
     font-family: 'Times New Roman', Times, serif;
     color: black;
 }
 
 h1 {
     text-align: center;
-    font-weight: bold;
-    text-decoration: underline;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 3rem;;
     margin: 40px;
 }
 
 .navbar {
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(18, 18, 18);
     height: clamp(2rem, 8vh, 40rem);
     margin: -15px;
     display: flex;
     align-items: center;
+}
+
+.navbar li {
+    display: inline-block;
+    overflow: hidden;
 }
 
 .navlänk {
@@ -50,7 +54,7 @@ h1 {
 .boxcontent {
     width: 50%;
     margin: 10px;
-    background-color: azure;
     border: 1px solid;
     border-color: rgb(200, 200, 200);
+    border-radius: 5px;
 }
