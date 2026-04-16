@@ -9,6 +9,11 @@
   </head>
 
   <body>
+  <ul class="sticky navbar">
+    <li> <a class="navlänk" href="huvudsida.html">Home</a> </li>
+    <li> <a class="navlänk" href="colour-picker.html">Colour Picker</a></li>
+  </ul>   
+
     <h1>Sök efter färg</h1>
 
     <button id="base">Base paints</button>
@@ -19,13 +24,12 @@
     <button id="technical">Technical paints</button>
     <button id="texture">Texture paints</button>
     <button id="contrast">Contrast paints</button>
-
-    <button id="filter">Filter by type or color</button>
     <button id="render">Render results:</button>
 
     <!--Results-->
     <h2>Results</h2>
-    <div class="button" id="searchresults"></div>
+
+    <div id="results" class="flexbox"></div>
     <script src="script.js"></script>
   </body>
 </html>

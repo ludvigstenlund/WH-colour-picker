@@ -2,6 +2,7 @@ body {
     background-color: rgb(243, 243, 243);
     font-family: 'Times New Roman', Times, serif;
     color: black;
+    user-select: none;
 }
 
 h1 {
@@ -10,6 +11,7 @@ h1 {
     font-size: 3rem;;
     margin: 40px;
 }
+
 
 .navbar {
     background-color: rgb(18, 18, 18);
@@ -49,6 +51,8 @@ h1 {
 .flexbox {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
+    align-items: start;
 }
 
 .boxcontent {
@@ -57,4 +61,66 @@ h1 {
     border: 1px solid;
     border-color: rgb(200, 200, 200);
     border-radius: 5px;
+}
+
+.aResult {
+    background-color: antiquewhite;
+    width: 24%;
+    margin: 5px;
+    height: 15vh;
+    white-space: pre-line;
+    text-align: center;
+}
+
+.black {
+    background-color: rgb(40, 40, 40);
+    color: white;
+    order: 1;
+}
+.yellow {
+    background-color: rgb(230, 230, 110);
+    order: 7;
+}
+.green {
+    background-color: rgb(66, 137, 66);
+    order: 8;
+}
+.blue {
+    background-color: rgb(63, 63, 164);
+    color: white;
+    order: 9;
+}
+.red {
+    background-color: rgb(225, 56, 56);
+    order: 5;
+}
+.purple {
+    background-color: blueviolet;
+    color: white;
+    order: 10;
+}
+.white {
+    background-color: white;
+    order: 3;
+}
+.metallic {
+    background-image: url(metallic_silver.jpg);
+    order: 12;
+}
+.brown {
+    background-color: rgb(103, 64, 46);
+    color: white;
+    order: 4;
+}
+.grey {
+    background-color:rgb(154, 154, 154);
+    order: 2;
+}
+.orange {
+    background-color: orange;
+    order: 6;
+}
+.pink {
+    background-color: pink;
+    order: 11;
 }
