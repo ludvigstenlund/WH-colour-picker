@@ -1,0 +1,52 @@
+.black {
+    background-color: rgb(40, 40, 40);
+    color: white;
+    order: 1;
+}
+.grey {
+    background-color:rgb(154, 154, 154);
+    order: 2;
+}
+.white {
+    background-color: white;
+    order: 3;
+}
+.brown {
+    background-color: rgb(103, 64, 46);
+    color: white;
+    order: 4;
+}
+.red {
+    background-color: rgb(225, 56, 56);
+    order: 5;
+}
+.orange {
+    background-color: orange;
+    order: 6;
+}
+.yellow {
+    background-color: rgb(230, 230, 110);
+    order: 7;
+}
+.green {
+    background-color: rgb(66, 137, 66);
+    order: 8;
+}
+.blue {
+    background-color: rgb(63, 63, 164);
+    color: white;
+    order: 9;
+}
+.purple {
+    background-color: blueviolet;
+    color: white;
+    order: 10;
+}
+.pink {
+    background-color: pink;
+    order: 11;
+}
+.metallic {
+    background-image: url(/images/metallic_silver.jpg);
+    order: 12;
+}

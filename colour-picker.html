@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>colorpicker</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="main.css" />
+    <meta charset="utf-8">
+    <title>colour_picker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/colordata.css">
+    <link rel="stylesheet" href="/css/navbar.css">
   </head>
 
   <body>
-  <ul class="sticky navbar">
-    <li> <a class="navlänk" href="huvudsida.html">Home</a> </li>
-    <li> <a class="navlänk" href="colour-picker.html">Colour Picker</a></li>
-  </ul>   
+    <header>
+      <nav class="sticky navbar">
+        <a class="navitem" href="https://www.warhammer-community.com/en-gb/"> <img class="navitem" src="/images/WarhammerLogo.png" alt="Warhammer"></a>
+        <ul>
+          <li> <a class="navitem" href="huvudsida.html">Home</a></li>
+          <li> <a class="navitem nuvarande_sida" href="colour-picker.html">Colour Picker</a></li>
+          <li> <a class="navitem" href="exbilder.html">Example images</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <h1>Sök efter färg</h1>
 
@@ -27,9 +34,9 @@
     <button id="render">Render results:</button>
 
     <!--Results-->
-    <h2>Results</h2>
+    <h2>Results:</h2>
 
     <div id="results" class="flexbox"></div>
-    <script src="script.js"></script>
+    <script src="/JavaScript/GetPaint.js"></script>
   </body>
 </html>

@@ -66,6 +66,7 @@ function getpaints () {
 
     for (let i = 0; i < data.payload.length; i++) {
 
+
       if (showbase === true && data.payload[i].type === "base") {
         createpaintdiv(data.payload[i].name, data.payload[i].type, data.payload[i].colorGroup)}
 

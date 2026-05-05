@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
 </head>
 <body>
-    <ul class="sticky navbar">
-        <li> <a class="navlänk" href="huvudsida.html">Home</a> </li>
-        <li> <a class="navlänk" href="colour-picker.html">Colour Picker</a></li>
-    </ul>   
+    <header>
+        <nav class="sticky navbar">
+            <a class="navitem" href="https://www.warhammer-community.com/en-gb/"> <img class="navitem" src="/images/WarhammerLogo.png" alt="Warhammer"></a>
+            <ul>
+                <li> <a class="navitem nuvarande_sida" href="huvudsida.html">Home</a></li>
+                <li> <a class="navitem" href="colour-picker.html">Colour Picker</a></li>
+                <li> <a class="navitem" href="exbilder.html">Example images</a></li>
+            </ul>
+        </nav>
+    </header>
+
 
     <h1 class="Title">Warhammer</h1>
     
     <div class="flexbox">
         <div class="boxcontent">
+            <h2>Om oss</h2>
             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. 
             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
@@ -25,7 +34,20 @@
         <div class="boxcontent">div2</div>
     </div>
 
-    <script src="script.js"></script>
+    <footer>
+        <form class="navitem footeritem" action="">
+            <h3>Write to us:</h3><br>
+            Your email: <br>
+            <input type="email" placeholder="Write your email here:"><br>
+            Your message: <br>
+            <input type="text" placeholder="Write your subject here:"><br>
+            <input type="text" placeholder="Write your message here:"><br>
+            <input type="submit" id="submitMessage">
+        </form>
+        <p class="navitem footeritem">Who are we? <br> <a class="link" href="mailto:ludvig.stenlund@skola.taby.se">ludvig.stenlund@skola.taby.se</a></p>    
+        <p class="navitem footeritem">Uhh lorem ipsum</p>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

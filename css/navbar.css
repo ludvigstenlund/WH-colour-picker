@@ -1,0 +1,32 @@
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    background-color: rgb(18, 18, 18);
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 20px;
+    height: 60px;   
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.navitem {
+    color: rgb(255, 255, 255);
+    height: 80%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 7vh;
+    display: block; 
+    margin: 10px;
+}
+
+.nuvarande_sida {
+    font-weight: bold;
+}
