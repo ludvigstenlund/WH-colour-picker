@@ -30,3 +30,9 @@
 .nuvarande_sida {
     font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+    .navitem {
+        margin: 6px;
+    }
+}

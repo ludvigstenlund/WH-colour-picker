@@ -9,7 +9,15 @@ let edge_button = document.getElementById("edge")
 let technical_button = document.getElementById("technical")
 let texture_button = document.getElementById("texture")
 let contrast_button = document.getElementById("contrast")
-let render_button = document.getElementById("render") 
+let search = document.getElementById("search")
+
+search.onkeydown = async function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    let searchTerm = search.value; // Hämtar det som står i sökrutan
+    console.log("Kommer söka efter", searchTerm);
+  }
+};
 
 let showbase = false
 let showlayer = false
@@ -28,11 +36,9 @@ edge_button.onclick = toggleedge
 technical_button.onclick = toggletechnical
 texture_button.onclick = toggletexture
 contrast_button.onclick = togglecontrast
-render_button.onclick = getpaints
+document.onclick = getpaints
 
-function togglebase () {showbase = !showbase
-  console.log(showbase)
-}
+function togglebase () {showbase = !showbase}
 function togglelayer () {showlayer = !showlayer}
 function toggleshade () {showshade = !showshade}
 function toggledry () {showdry = !showdry}
@@ -42,6 +48,9 @@ function toggletexture () {showtexture = !showtexture}
 function togglecontrast () {showcontrast = !showcontrast}
 
 function createpaintdiv (name, type, group) {
+  if (typeof searchTerm === 'undefined') {
+    console.log("undefined!")
+  }
   let div = document.createElement('div');
   div.classList.add('aResult');
   div.classList.add(group)
@@ -65,7 +74,6 @@ function getpaints () {
     console.log(data);
 
     for (let i = 0; i < data.payload.length; i++) {
-
 
       if (showbase === true && data.payload[i].type === "base") {
         createpaintdiv(data.payload[i].name, data.payload[i].type, data.payload[i].colorGroup)}

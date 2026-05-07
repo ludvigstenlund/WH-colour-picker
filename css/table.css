@@ -2,21 +2,23 @@ table {
     width: 100%;
 }
 
-tfoot {
-    background-color: rgb(130, 130, 130, 0.6);
-    font-weight: bold;
-}
-
 th, td {
     margin: 1%;
     border: 1px solid;
     border-color: rgb(200, 200, 200);
     border-radius: 5px;
+    width: 100/3%
 }
 
 th {
     background-color: rgb(130, 130, 130, 0.6);
 }
+
+tfoot {
+    background-color: rgb(130, 130, 130, 0.6);
+    font-weight: bold;
+}
+
 
 .type { 
     background-color: rgb(130, 130, 130, 0.2);
