@@ -1,65 +1,25 @@
 const paintapi = 'https://ludvigstenlund.github.io/WH-colour-API/WH-colour-fullrange'
 
-//knappar
-let base_button = document.getElementById("base")
-let layer_button = document.getElementById("layer")
-let shade_button = document.getElementById("shade")
-let dry_button = document.getElementById("dry")
-let edge_button = document.getElementById("edge")
-let technical_button = document.getElementById("technical")
-let texture_button = document.getElementById("texture")
-let contrast_button = document.getElementById("contrast")
-let search = document.getElementById("search")
+let searchTerm = ""
 
-search.onkeydown = async function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    let searchTerm = search.value; // Hämtar det som står i sökrutan
-    console.log("Kommer söka efter", searchTerm);
-  }
-};
-
-let showbase = false
-let showlayer = false
-let showshade = false
-let showdry = false
-let showedge = false
-let showtechnical = false
-let showtexture = false
-let showcontrast = false
-
-base_button.onclick = togglebase
-layer_button.onclick = togglelayer
-shade_button.onclick = toggleshade
-dry_button.onclick = toggledry
-edge_button.onclick = toggleedge
-technical_button.onclick = toggletechnical
-texture_button.onclick = toggletexture
-contrast_button.onclick = togglecontrast
-document.onclick = getpaints
-
-function togglebase () {showbase = !showbase}
-function togglelayer () {showlayer = !showlayer}
-function toggleshade () {showshade = !showshade}
-function toggledry () {showdry = !showdry}
-function toggleedge () {showedge = !showedge}
-function toggletechnical () {showtechnical = !showtechnical}
-function toggletexture () {showtexture = !showtexture}
-function togglecontrast () {showcontrast = !showcontrast}
-
-function createpaintdiv (name, type, group) {
-  if (typeof searchTerm === 'undefined') {
-    console.log("undefined!")
-  }
-  let div = document.createElement('div');
-  div.classList.add('aResult');
-  div.classList.add(group)
-  let text = document.createTextNode(name + "\n\n type: " + type + "\n color: " + group);
-  div.appendChild(text);
-  document.getElementById("results").appendChild(div);
+function filterByName(event) {
+  searchTerm = event.target.value;
+  console.log(searchTerm)
+  getpaints()
 }
 
-function getpaints () {
+function createpaintdiv (name, type, group) { //skapar div för varje enskild färg som ska visas
+  if (name.toLowerCase().includes(searchTerm.toLowerCase())) {
+    let div = document.createElement('div');
+    div.classList.add('aResult');
+    div.classList.add(group)
+    let text = document.createTextNode(name + "\n\n type: " + type + "\n color: " + group);
+    div.appendChild(text);
+    document.getElementById("results").appendChild(div);
+  }
+}
+
+function getpaints () { //funktionen som hämtar json-fil som API från github pages
   document.getElementById("results").innerHTML = "" //tömmer diven "results" när getpaints kallas på
   fetch (paintapi) //hänmtar paintapi
 
@@ -73,7 +33,7 @@ function getpaints () {
   .then(data => {
     console.log(data);
 
-    for (let i = 0; i < data.payload.length; i++) {
+    for (let i = 0; i < data.payload.length; i++) { //för varje färg i payload
 
       if (showbase === true && data.payload[i].type === "base") {
         createpaintdiv(data.payload[i].name, data.payload[i].type, data.payload[i].colorGroup)}

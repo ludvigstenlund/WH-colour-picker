@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
     
+    <!--Länkar till css--> 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/colordata.css">
     <link rel="stylesheet" href="/css/navbar.css">
@@ -16,6 +17,7 @@
 
   <body>
     <header>
+      <!--Navbar överst--> 
       <nav class="sticky navbar">
         <a class="navitem" href="https://www.warhammer-community.com/en-gb/"> <img class="navitem" src="/images/WarhammerLogo.png" alt="Warhammer"></a>
         <ul>
@@ -28,8 +30,9 @@
     <main>
       <h1>Sök efter färg</h1>
 
+      <!--Sökfunktioner för javascript--> 
       <section>
-        <input id="search" type="text" placeholder="Search for a colour:"><br>
+        <input id="search" type="text" placeholder="Search for a colour:" oninput="filterByName(event)"><br>
 
         <button id="base">Base paints</button>
         <button id="layer">Layer paints</button>
@@ -39,7 +42,6 @@
         <button id="technical">Technical paints</button>
         <button id="texture">Texture paints</button>
         <button id="contrast">Contrast paints</button>
-        <button id="render">Render results:</button>
 
         <h2>Results:</h2>
       
@@ -47,6 +49,8 @@
 
       </section>
       <script src="/JavaScript/GetPaint.js"></script>
+      <script src="/JavaScript/toggleOnOff.js"></script>
+
     </main>
 
     <footer>

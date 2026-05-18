@@ -55,7 +55,7 @@ a:hover {
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) { /*Om Skärmen är mindre än 601px:*/
     body {
         font-size: smaller;
     }

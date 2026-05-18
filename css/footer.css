@@ -20,7 +20,7 @@ footer.child {
     margin-right: 10%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) { /*Om Skärmen är mindre än 601px:*/
     footer {
         justify-content: center;
     }
